@@ -10,6 +10,15 @@
   integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- include libraries(jQuery, bootstrap) -->
+<link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script> 
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script> 
+
+<!-- include summernote css/js -->
+<link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.css" rel="stylesheet">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.js"></script>
+
 <style>
   .img-profile-picture {
     border-radius: 50%;
@@ -47,6 +56,7 @@ padding: 15px;
   .div-profile-name{
     position: absolute;
     top:0;
+    margin-left:20%;
     
 
   }
@@ -588,7 +598,8 @@ padding: 15px;
           </button>
         </div>
         <div class="modal-body">
-          <textarea></textarea>
+          <div class="summernote">summernote 1</div>
+
           <button type="button" class="btn btn-primary">Send</button>
 
         </div>
@@ -658,6 +669,10 @@ padding: 15px;
 
 
 <script>
+
+$(document).ready(function() {
+  $('.summernote').summernote();
+});
   var slideIndex = 1;
   showSlides(slideIndex);
   
